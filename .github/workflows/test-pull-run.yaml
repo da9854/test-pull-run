@@ -1,0 +1,15 @@
+name: test-pull-run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-pull-run:
+    runs-on: ubuntu-latest
+    name: test-pull-run
+    steps:
+      - name: Docker pull and run
+        run: |
+          docker pull nginx:latest
+          docker images
+
